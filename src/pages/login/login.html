@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  padding>
+
+  <form [formGroup]="loginForm" (submit)="signinUser()">
+  <ion-list>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input  formControlName="email" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input formControlName="password" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button type="submit" [disabled]="!this.loginForm.valid">Login</button>
+  <strong> registered yet registered?</strong><a href="#" (click)="register()"> Register</a>
+</form>
+</ion-content>
